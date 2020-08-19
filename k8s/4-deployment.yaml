@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello
+spec:
+  selector:
+    matchLabels:
+      job: say-hello
+  template:
+    metadata:
+      labels:
+        job: say-hello
+    spec:
+      containers:
+      - name: hello
+        image: alpine
+        command: ["sh", "-c", "while true; do echo $(date)': Hello world' && sleep 10; done;"]

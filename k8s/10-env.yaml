@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: front
+  labels:
+    app: jsfriends
+spec:
+  replicas: 2
+  selector: 
+    matchLabels:
+      section: front
+  template:
+    metadata: 
+      labels:
+        app: jsfriends
+        section: front
+    spec:
+      containers:
+        - name: front
+          image: joellord/jsfriends-front:latest
+          ports: 
+          - containerPort: 8080
+          env: 
+            - name: WORKING_API_URL
+              value: api
