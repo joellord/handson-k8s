@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: front
   labels:
-    app: jsfriends
+    app: handsonk8s
 spec:
   selector:
     section: front

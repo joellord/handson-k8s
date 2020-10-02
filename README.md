@@ -63,7 +63,7 @@ Real application
 
 * kubectl apply -f ./k8s/5-front.yaml
 * kubectl get all
-* kubectl get all -l app=jsfriends
+* kubectl get all -l app=handsonk8s
 
 How to reach? Services!
 
@@ -110,7 +110,7 @@ Add environment variables
 
 Add other API service
 
-name: jsfriends-crash
+name: handsonk8s-crash
 env var: CRASHING_API_URL
 
 ## Intro to OpenShift

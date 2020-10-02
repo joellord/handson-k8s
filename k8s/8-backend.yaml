@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: api
   labels:
-    app: jsfriends
+    app: handsonk8s
 spec:
   replicas: 1
   selector: 
@@ -12,12 +12,12 @@ spec:
   template:
     metadata: 
       labels:
-        app: jsfriends
+        app: handsonk8s
         section: api
     spec:
       containers:
         - name: api
-          image: joellord/jsfriends-api:latest
+          image: joellord/handsonk8s-api:latest
           ports: 
           - containerPort: 3000
 ---
@@ -26,7 +26,7 @@ kind: Service
 metadata:
   name: api
   labels:
-    app: jsfriends
+    app: handsonk8s
 spec:
   selector:
     section: api

@@ -1,0 +1,157 @@
+{
+  "title": "Hands On K8s",
+  "presenter": "Joel Lord",
+  "date": "October 2, 2020",
+  "conference": "La Mêlée Numérique",
+  "location": "The Internets",
+  "twitter": {
+    "presenter": "@joel__lord",
+    "event": "#kubernetes"
+  },
+  "frame": {                    
+    "top": {                    
+      "center": "title"         
+    },
+    "bottom": {                 
+      "left": ["twitter.presenter", "twitter.event"],
+      "center": "Red Hat OpenShift"
+    }
+  },
+  "slides": [
+    {
+      "type": "title",
+      "title": "Hands On Kubernetes"
+    },
+    {
+      "type": "split",
+      "left": {
+        "title": "Hi, I'm Joel",
+        "list": [
+          "Dev Advocate @ Red Hat OpenShift",
+          "Based in Ottawa",
+          "💓  Twitter: @joel__lord"        ]
+      },
+      "right": {
+        "text": [
+          "    .-\"\"\"\"\"-.",
+          "    / _____/\\_\\",
+          "   //`__   __ \\\\",
+          "  //  (o) (o)  \\\\",
+          " (_    (___)    _)",
+          "   \\  \\_____/  /",
+          "    `-._   _.-'",
+          "    __.-)_(-,__ ",
+          " ./'/   |_|   \\`\\.",
+          " /   `\"\"\"\"\"\"\"\"\"\"`  \\"
+        ]
+      }
+    },
+    {
+      "type": "titleOnly",
+      "title": "Kubernetes"
+    },
+    {
+      "type": "simple",
+      "title": "What is K8s",
+      "text": "Kubernetes (K8s) is an open-source system for automating deployment, scaling, and management of containerized applications."
+    },
+    {
+      "type": "list",
+      "title": "What does it do?",
+      "list": [
+        "Ensures Pods (containers) are always running",
+        "Makes scaling your application easier",
+        "Takes care of networking between the Pods"
+      ]
+    },
+    {
+      "type": "titleOnly",
+      "title": "Nodes"
+    },
+    {
+      "type": "simple",
+      "title": "Nodes",
+      "text": "Kubernetes runs your workload by placing containers into Pods to run on Nodes. A node may be a virtual or physical machine, depending on the cluster. Each node contains the services necessary to run Pods, managed by the control plane.\n\nTypically you have several nodes in a cluster; in a learning or resource-limited environment, you might have just one."
+    },
+    {
+      "type": "terminal",
+      "title": "Nodes",
+      "text": "get nodes"
+    },
+    {
+      "type": "titleOnly",
+      "title": "Pods"
+    },
+    {
+      "type": "simple",
+      "title": "Pods",
+      "text": "Pods are the smallest deployable units of computing that you can create and manage in Kubernetes.\n\nA Pod (as in a pod of whales or pea pod) is a group of one or more containers, with shared storage/network resources, and a specification for how to run the containers."
+    },
+    {
+      "type": "terminal",
+      "title": "Pods",
+      "text": ""
+    },
+    {
+      "type": "titleOnly",
+      "title": "Deployments"
+    },
+    {
+      "type": "simple",
+      "title": "Deployments",
+      "text": "Pods by themselves are useless...  introducing deployments.\n\nA Deployment provides declarative updates for Pods ReplicaSets."
+    },
+    {
+      "type": "simple",
+      "title": "Deployments",
+      "text": "You describe a desired state in a Deployment, and the Deployment Controller changes the actual state to the desired state at a controlled rate. You can define Deployments to create new ReplicaSets, or to remove existing Deployments and adopt all their resources with new Deployments."
+    },
+    {
+      "type": "terminal",
+      "title": "Deployments",
+      "text": ""
+    },
+    {
+      "type": "titleOnly",
+      "title": "Services"
+    },
+    {
+      "type": "simple",
+      "title": "Services",
+      "text": "An abstract way to expose an application running on a set of Pods as a network service.\n\nWith Kubernetes you don't need to modify your application to use an unfamiliar service discovery mechanism. Kubernetes gives Pods their own IP addresses and a single DNS name for a set of Pods, and can load-balance across them."
+    },
+    {
+      "type": "terminal",
+      "title": "Services",
+      "text": ""
+    },
+    {
+      "type": "titleOnly",
+      "title": "Ingresses"
+    },
+    {
+      "type": "simple",
+      "title": "Ingresses",
+      "text": "An API object that manages external access to the services in a cluster, typically HTTP.\n\nIngress may provide load balancing, SSL termination and name-based virtual hosting."
+    },
+    {
+      "type": "terminal",
+      "title": "Ingresses",
+      "text": ""
+    },
+    {
+      "type": "titleOnly",
+      "title": "Deploy the API"
+    },
+    {
+      "type": "terminal",
+      "title": "Deploy the API",
+      "text": ""
+    },
+    {
+      "type": "simple",
+      "title": "Thank You",
+      "text": "More information available at\n[blue][underscore]http://ezurl.to/handson-k8s[reset]\n\nReach out on Twitter at [blue][bright]@joel__lord[reset]"
+    }
+  ]
+}
