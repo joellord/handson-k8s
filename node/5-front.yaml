@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: front
+  labels:
+    app: handsonk8s
+spec:
+  replicas: 2
+  selector: 
+    matchLabels:
+      section: front
+  template:
+    metadata: 
+      labels:
+        app: handsonk8s
+        section: front
+    spec:
+      containers:
+        - name: front
+          image: joellord/handsonk8s-front:latest
+          ports: 
+          - containerPort: 8080

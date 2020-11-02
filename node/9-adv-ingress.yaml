@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: main
+  annotations:
+   nginx.ingress.kubernetes.io/rewrite-target: /$2
+spec:
+  rules:
+  - http:
+      paths:
+        - backend:
+            serviceName: api
+            servicePort: 3000
+          path: /api(/|$)(.*)
+          pathType: Prefix
+        - backend:
+            serviceName: front
+            servicePort: 8080
+          path: /()(.*)

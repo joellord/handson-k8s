@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello
+spec:
+  containers:
+  - name: hello
+    image: node:14
+    command: ["/bin/bash", "-c", "--"]
+    args: [
+      "node -e \"console.log('Hello World'); setTimeout(()=>console.log('Terminating'), 30000);\""
+    ]
