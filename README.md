@@ -38,6 +38,12 @@ A Pod (as in a pod of whales or pea pod) is a group of one or more containers, w
 * printenv
 * curl google.com
 * curl webserver
+Log back into web server
+hostname -I
+log back in toolbox 
+curl ip
+
+
 
 ## Deployments
 

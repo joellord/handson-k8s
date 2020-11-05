@@ -8,7 +8,7 @@
     "containers": [
       {
         "name": "toolbox",
-        "image": "registry.access.redhat.com/ubi8/ubi",
+        "image": "registry.redhat.io/ubi8",
         "command": [
           "/bin/bash",
           "-c",
