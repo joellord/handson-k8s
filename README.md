@@ -1,19 +1,23 @@
 # Hands-On Intro To Kubernetes (And OpenShift)
+Find the workshop notes at https://hackmd.io/N8gB_z0SREGDQ5c8DUb7og?both#Further-Reading
 
 ## Intro to Kubernetes
 
 ### Prerequisites
 
-* Docker
-* Minikube
-* Kubectl
+* Docker https://www.docker.com/ (or Podman https://podman.io/)
+* Minikube https://minikube.sigs.k8s.io/docs/start/
+* Kubectl https://kubernetes.io/docs/tasks/tools/
+
 
 ## Nodes
 Kubernetes runs your workload by placing containers into Pods to run on Nodes. A node may be a virtual or physical machine, depending on the cluster. Each node contains the services necessary to run Pods, managed by the control plane.
 
 Typically you have several nodes in a cluster; in a learning or resource-limited environment, you might have just one.
 
-* kubectl get nodes
+```
+kubectl get nodes
+```
 
 ## Pods
 
