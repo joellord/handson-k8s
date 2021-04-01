@@ -34,6 +34,7 @@ kubectl scale deployment/hello --replicas=3
 kubectl get all
 kubectl get pods
 kubectl get pods -l job=say-hello
+kubectl logs -f -l job=say-hello
 ```
 
 ```
@@ -47,8 +48,7 @@ kubectl get all -l app=handsonk8s
 kubectl apply -f https://raw.githubusercontent.com/joellord/handson-k8s/master/k8s/6-service.yaml
 kubectl exec -it pod/toolbox -- /bin/bash
 
-curl localhost
-curl front
+curl front:8080
 ```
 
 ```
@@ -57,16 +57,17 @@ kubectl logs -f -l section=front --prefix=true
 
 ### Ingresses
 ```
-kubectl apply -f https://github.com/joellord/handson-k8s/blob/master/k8s/7-ingress.yaml
+kubectl apply -f https://raw.githubusercontent.com/joellord/handson-k8s/master/k8s/7-ingress.yaml
 curl $(minikube ip)
 ```
 
+
 ### Deploy the back-end
 ```
-kubectl apply -f https://github.com/joellord/handson-k8s/blob/master/k8s/8-backend.yaml
-kubectl apply -f https://github.com/joellord/handson-k8s/blob/master/k8s/9-adv-ingress.yaml
+kubectl apply -f https://raw.githubusercontent.com/joellord/handson-k8s/master/k8s/8-backend.yaml
+kubectl apply -f https://raw.githubusercontent.com/joellord/handson-k8s/master/k8s/9-adv-ingress.yaml
 
 curl $(minikube ip)/api
 
-kubectl apply -f https://github.com/joellord/handson-k8s/blob/master/k8s/10-env.yaml
+kubectl apply -f https://raw.githubusercontent.com/joellord/handson-k8s/master/k8s/10-env.yaml
 ```

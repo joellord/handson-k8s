@@ -101,6 +101,8 @@ Ingress may provide load balancing, SSL termination and name-based virtual hosti
 * kubectl apply -f ./k8s/7-ingress.yaml
 * curl $(minikube ip)
 
+If using the IBM Cloud: https://cloud.ibm.com/docs/containers?topic=containers-ingress-about
+
 ## API
 
 Deploy the API 
